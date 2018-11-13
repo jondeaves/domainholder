@@ -1,0 +1,77 @@
+{
+  "name": "domainholder",
+  "description": "A generic static site for use as placeholder for a new domain",
+  "version": "1.0.0",
+  "author": "Jon Deaves <hello@jondeaves.me>",
+  "contributors": [
+    "Jon Deaves <hello@jondeaves.me>"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "SITE_URL=http://localhost:8000 gatsby develop",
+    "format": "prettier --write 'src/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jondeaves/domainholder.git"
+  },
+  "git": {
+    "scripts": {
+      "commit-msg": "./scripts/commit-msg $1",
+      "pre-commit": "./node_modules/.bin/lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/prettier --write",
+      "./node_modules/.bin/eslint --no-ignore",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@reach/router": "~1.2.1",
+    "babel-preset-env": "~1.7.0",
+    "babel-preset-react": "~6.24.1",
+    "classnames": "~2.2.6",
+    "dotenv": "~6.1.0",
+    "eval": "~0.1.2",
+    "fela": "~6.2.3",
+    "fela-dom": "~8.0.4",
+    "fela-utils": "~8.1.3",
+    "gatsby": "~2.0.37",
+    "gatsby-image": "~2.0.19",
+    "gatsby-plugin-favicon": "~3.1.4",
+    "gatsby-plugin-fela": "~0.0.6",
+    "gatsby-plugin-google-analytics": "~2.0.7",
+    "gatsby-plugin-manifest": "~2.0.7",
+    "gatsby-plugin-netlify": "~2.0.3",
+    "gatsby-plugin-offline": "~2.0.11",
+    "gatsby-plugin-react-helmet": "~3.0.1",
+    "gatsby-plugin-typescript": "~2.0.1",
+    "history": "~4.7.2",
+    "lint-staged": "~8.0.4",
+    "lodash": "~4.17.11",
+    "react": "~16.6.0",
+    "react-dom": "~16.6.0",
+    "react-fela": "~8.0.4",
+    "react-helmet": "^5.2.0",
+    "reset-css": "~4.0.1"
+  },
+  "devDependencies": {
+    "@types/classnames": "~2.2.6",
+    "@types/dotenv": "~4.0.3",
+    "@types/lodash": "~4.14.117",
+    "@types/node": "~10.12.2",
+    "@types/react": "~16.4.18",
+    "@types/react-dom": "~16.0.9",
+    "@types/react-helmet": "~5.0.7",
+    "babel-loader": "~8.0.4",
+    "prettier": "~1.14.3",
+    "ts-jest": "~23.10.4",
+    "tslint": "~5.11.0",
+    "tslint-config-prettier": "~1.15.0",
+    "tslint-react": "~3.6.0",
+    "typescript": "~3.1.6"
+  }
+}
